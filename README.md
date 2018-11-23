@@ -5,8 +5,8 @@ This project also has some basic usage of Java8 Features as CompletableFuture.Th
 This project also has Solutions to the data structure and algorithm questions.
 
 Basic requirements
-1. Java 8
-2. Maven
+1. Java 8. For windows users setup Java https://www.mkyong.com/java/how-to-set-java_home-on-windows-10/
+2. Maven. For windows users setup maven https://www.mkyong.com/maven/how-to-install-maven-in-windows/
 3. MySql Database Server.
 
 Run Project.
