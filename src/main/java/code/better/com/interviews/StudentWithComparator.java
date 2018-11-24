@@ -2,46 +2,16 @@ package code.better.com.interviews;
 
 import java.util.Comparator;
 
+import code.better.com.pojo.Student;
+
 /**
  * 
- * This class is used to check how comparator interface works and what are the requirements
- * We need to override compare Method form Comparator<?> Interface.
+ * This class is used to check how comparator interface works and what are the
+ * requirements We need to override compare Method form Comparator<?> Interface.
  *
  */
 public class StudentWithComparator {
-
-	private String id;
-	private String firstName;
-	private String lastName;
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	@Override
-	public String toString() {
-		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + "]";
-	}
+	
 
 	/**
 	 * 
@@ -50,7 +20,7 @@ public class StudentWithComparator {
 	 */
 	public static class StudentBuilder {
 
-		StudentWithComparator student = new StudentWithComparator();
+		Student student = new Student();
 
 		public StudentBuilder setId(String id) {
 			this.student.setId(id);
@@ -67,22 +37,22 @@ public class StudentWithComparator {
 			return this;
 		}
 
-		public StudentWithComparator build() {
+		public Student build() {
 			return this.student;
 		}
 
 	}
 
-	public static class StudentComparator implements Comparator<StudentWithComparator> {
+	public static class StudentComparator implements Comparator<Student> {
 
-		public int compare(StudentWithComparator firstStudent, StudentWithComparator secondStudent) {
+		public int compare(Student firstStudent, Student secondStudent) {
 			int idDiff = 0;
 			int firstNameDiff = 0;
-			idDiff = firstStudent.id.compareTo(secondStudent.id);
+			idDiff = firstStudent.getId().compareTo(secondStudent.getId());
 			if (idDiff == 0) {
-				firstNameDiff = firstStudent.firstName.compareTo(secondStudent.firstName);
+				firstNameDiff = firstStudent.getFirstName().compareTo(secondStudent.getFirstName());
 				if (firstNameDiff == 0)
-					return firstStudent.lastName.compareTo(secondStudent.lastName);
+					return firstStudent.getLastName().compareTo(secondStudent.getLastName());
 				else
 					return firstNameDiff;
 			} else return idDiff;
@@ -90,5 +60,4 @@ public class StudentWithComparator {
 
 	}
 
-	
 }

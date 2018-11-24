@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import code.better.com.core.AspectOriented;
 import code.better.com.core.Filter;
 import code.better.com.resource.HelloWorld;
+import code.better.com.resource.StudentResource;
 
 @Component
 public class JerseyConfiguration extends ResourceConfig {
@@ -18,6 +19,7 @@ public class JerseyConfiguration extends ResourceConfig {
         classes.add(HelloWorld.class);
         classes.add(Filter.class);
         classes.add(AspectOriented.class);
+        classes.add(StudentResource.class);
         registerClasses(classes);
 	}
 

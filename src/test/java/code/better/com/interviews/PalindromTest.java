@@ -22,10 +22,7 @@ public class PalindromTest {
 		assertTrue(unit.checkIfPalindrom(""));
 		assertTrue(unit.checkIfPalindrom("a"));
 		assertTrue(unit.checkIfPalindrom("aba"));
-		long time=System.currentTimeMillis();
-		System.out.println(String.format("Time started %s", time));
 		assertTrue(unit.checkIfPalindrom("Eva, can I see bees in a cave"));
-		System.out.println(String.format("Time ended %s", System.currentTimeMillis()-time));
 	}
 
 	@Test
@@ -34,10 +31,7 @@ public class PalindromTest {
 		assertTrue(unit.checkIfPalindromRecursion(""));
 		assertTrue(unit.checkIfPalindromRecursion("a"));
 		assertTrue(unit.checkIfPalindromRecursion("aba"));
-		long time=System.currentTimeMillis();
-		System.out.println(String.format("Time started %s", time));
 		assertTrue(unit.checkIfPalindromRecursion("Eva, can I see bees in a cave"));
-		System.out.println(String.format("Time ended %s", System.currentTimeMillis()-time));
 	}
 
 }

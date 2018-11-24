@@ -32,7 +32,6 @@ public class AspectOriented {
 	}
 
 	public Object processJointPoing(ProceedingJoinPoint jointPoing) {
-
 		ApplicationContext ctx = ApplicationContextUtils.getApplicationContext();
 		ExecutorService executorService = (ExecutorService) ctx.getBean("serviceThread");
 		try {
