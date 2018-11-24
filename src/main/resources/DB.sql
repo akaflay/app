@@ -1,0 +1,8 @@
+CREATE DATABASE `college` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */;
+
+CREATE TABLE `college`.`student` (
+  `id` VARCHAR(64) NOT NULL,
+  `firstName` VARCHAR(128) NOT NULL,
+  `lastName` VARCHAR(128) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE);
