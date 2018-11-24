@@ -15,6 +15,9 @@ This project also has Solutions to the data structure and algorithm questions.
 3. mvn spring-boot:run
 4. Make a GET request to http://localhost:8080/endpoints/first
 
+##Circuit Breaker
+1. http://localhost:8080/endpoints/curcitbreaker
+
 ## Questions and Concerns
 https://better-coder.slack.com/
 
