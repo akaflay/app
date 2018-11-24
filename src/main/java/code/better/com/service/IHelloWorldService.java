@@ -6,5 +6,6 @@ public interface IHelloWorldService {
 
 	void firstEndPoint(AsyncResponse response);
 	void secondEndPointWithCombination(AsyncResponse response);
+	void curcuitBreaker(AsyncResponse response);
 
 }
