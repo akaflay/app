@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import org.springframework.web.client.RestTemplate;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
@@ -35,6 +36,11 @@ public class Config {
 		return Executors.newFixedThreadPool(5);
 	}
 
+	@Bean
+	public RestTemplate gerRestTemplate() {
+		return new RestTemplate();
+	}
+
 	@Bean(name = "dbPool")
 	public DataSource getDbPool() {
 		HikariConfig hikariConfig = new HikariConfig();
@@ -50,7 +56,7 @@ public class Config {
 	public LocalSessionFactoryBean getSessionFactory(@Qualifier("dbPool") DataSource dataSource) {
 		LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
 		Properties props = new Properties();
-		props.put("hibernate.show_sql",true);
+		props.put("hibernate.show_sql", true);
 		props.put("hibernate.hbm2ddl.auto", "validate");
 		factoryBean.setDataSource(dataSource);
 		factoryBean.setHibernateProperties(props);

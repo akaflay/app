@@ -28,5 +28,12 @@ public class HelloWorld {
 	public void secondEndPoint(@Suspended AsyncResponse response) {
 		service.secondEndPointWithCombination(response);
 	}
+	
+	@GET
+	@Path("/curcitbreaker")
+	public void curcuitBreaker(@Suspended AsyncResponse response) {
+		service.curcuitBreaker(response);
+	}
+	
 
 }
