@@ -13,7 +13,7 @@ This project also has Solutions to the data structure and algorithm questions.
 1. Build the project using mvn clean install command.
 2. Change the configuration of the DB in the application.properties in the src/main/resource folder.
 3. mvn spring-boot:run
-4. Make a GET request to http://localhost:8080/endpoints/firstendpoint
+4. Make a GET request to http://localhost:8080/endpoints/first
 
 ## Questions and Concerns
 https://better-coder.slack.com/
