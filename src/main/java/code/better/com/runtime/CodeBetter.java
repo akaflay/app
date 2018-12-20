@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -21,6 +22,7 @@ import code.better.com.pojo.Student;
 @EntityScan(basePackageClasses=Student.class)
 @ComponentScan({"code.better.com"})
 @EnableCircuitBreaker
+@EnableEurekaClient
 public class CodeBetter {
 
 	public static void main(String[] args) {
