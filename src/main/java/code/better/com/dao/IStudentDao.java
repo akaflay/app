@@ -1,11 +1,14 @@
 package code.better.com.dao;
 
 
-import com.fasterxml.jackson.databind.JsonNode;
+import java.util.List;
+
+
+import code.better.com.pojo.Student;
 
 
 public interface IStudentDao {
-	JsonNode findStudents(String id);
+	List<Student> findStudents(String id);
 
 	boolean delete(String studentId);
 

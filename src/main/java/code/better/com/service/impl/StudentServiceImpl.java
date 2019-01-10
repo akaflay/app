@@ -1,5 +1,6 @@
 package code.better.com.service.impl;
 
+import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 
@@ -28,7 +29,7 @@ public class StudentServiceImpl implements IStudentService {
 
 	}
 
-	public CompletableFuture<JsonNode> getStudents(String id) {
+	public CompletableFuture<List<Student>> getStudents(String id) {
 		return CompletableFuture.completedFuture(dao.findStudents(id));
 	}
 
