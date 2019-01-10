@@ -42,7 +42,7 @@ public class StudentServiceImpl implements IStudentService {
 	private CompletableFuture<JsonNode> delete(String studentId) {
 		ObjectNode response = JsonUtils.createObjectNode();
 		if (dao.delete(studentId))
-			response.put("response", "Successfully deleted student with id " + studentId);
+			response.put("response",  studentId);
 		else
 			response.put("response", "Unable to deleted student with id " + studentId);
 		return CompletableFuture.completedFuture(response);
@@ -57,7 +57,7 @@ public class StudentServiceImpl implements IStudentService {
 		ObjectNode response = JsonUtils.createObjectNode();
 		student.setId(UUID.randomUUID().toString());
 		dao.addStudent(student);
-		response.put("response", "Successfully Added student with id " + student.getId());
+		response.put("response", student.getId());
 		return CompletableFuture.completedFuture(response);
 	}
 
