@@ -17,10 +17,8 @@ public class Student {
 	@JsonProperty("studentId")
 	private String id;
 	@Column(name = "firstName")
-	@JsonProperty("First Name")
 	private String firstName;
 	@Column(name = "lastName")
-	@JsonProperty("Last Name")
 	private String lastName;
 
 	public Student() {
